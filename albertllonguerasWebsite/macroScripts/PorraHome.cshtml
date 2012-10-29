@@ -1,0 +1,51 @@
+@using umbraco.MacroEngines
+@using albertllonguerasWebsite.Models;
+@{
+    //informació previa
+    CurrentModel.GetPropertyValue("jornada");
+    foreach (DynamicNode node in CurrentModel.Descendants("Previa").Items.Where(x => x.GetPropertyValue("jornada") == CurrentModel.GetPropertyValue("jornada")))
+    {
+        <h1>@node.GetPropertyValue("titol")</h1>
+        @Html.Raw(node.GetPropertyValue("text"))
+    }
+
+    //informació jugador
+    List<PuntuacioJornada> puntuacionsJornada = new List<PuntuacioJornada>();
+    
+    <h2>
+        Aquests son els jugadors:</h2>
+    <ul>
+        @foreach (DynamicNode jugador in CurrentModel.Descendants("Jugador"))
+        {
+            foreach (DynamicNode puntuacioOrdenada in jugador.Descendants("Puntuacio").Items.
+                Where(j => j.GetPropertyValue("jornada") == CurrentModel.GetPropertyValue("jornada")))
+            {
+                PuntuacioJornada puntuacioModel = new PuntuacioJornada();
+                puntuacioModel.Nom=jugador.Name;
+                puntuacioModel.Puntuacio = puntuacioOrdenada.GetPropertyValue("puntuacioJornada");
+                puntuacionsJornada.Add(puntuacioModel);
+            }
+        }
+        @{
+            foreach (var puntuacioJugadorOrdenada in puntuacionsJornada.OrderByDescending(x=>x.Puntuacio))
+            {
+                <li>
+                    <p>@puntuacioJugadorOrdenada.Nom</p>
+                    <p>@puntuacioJugadorOrdenada.Puntuacio</p>
+                </li>
+            }
+        }
+    </ul>
+    //informació jugadors ordenats per la puntuació
+    <h2>
+        Ranking jugadors:</h2>
+    <ul>
+        @foreach (DynamicNode puntuacioTotal in CurrentModel.Descendants("Jugador").Items.OrderByDescending(x => x.GetPropertyValue("puntuacioTotal")))
+        {
+            <li>@puntuacioTotal.Name
+                <p>
+                    Puntuació Total: @puntuacioTotal.GetPropertyValue("puntuacioTotal")</p>
+            </li>
+        }
+    </ul>
+}

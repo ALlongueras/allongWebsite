@@ -1,0 +1,8 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Porra.master" AutoEventWireup="true" %>
+	
+<asp:Content ContentPlaceHolderId="PorraContent" runat="server">
+	<!-- Insert "PorraContent" markup here -->
+	<form runat="server">
+	<umbraco:Macro Alias="Login" runat="server" />
+	</form>
+</asp:Content>

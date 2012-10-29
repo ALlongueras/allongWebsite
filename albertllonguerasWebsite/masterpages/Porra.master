@@ -1,0 +1,11 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/umbraco/masterpages/default.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderID="ContentPlaceHolderDefault" runat="server">
+ <umbraco:Macro Alias="PorraMenuNavegacio" runat="server" />
+<asp:ContentPlaceHolder Id="PorraContent" runat="server">
+	<!-- Insert default "PorraContent" markup here -->
+	
+	paco
+</asp:ContentPlaceHolder>
+
+</asp:Content>
