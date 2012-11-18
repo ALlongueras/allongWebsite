@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace albertllonguerasWebsite.usercontrols
+namespace Logica.usercontrols
 {
 
 

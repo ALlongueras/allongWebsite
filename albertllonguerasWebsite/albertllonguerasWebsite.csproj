@@ -10,7 +10,7 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>albertllonguerasWebsite</RootNamespace>
+    <RootNamespace>Logica</RootNamespace>
     <AssemblyName>albertllonguerasWebsite</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
@@ -85,6 +85,9 @@
     <Reference Include="MySql.Data, Version=5.1.2.2, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.10\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -210,6 +213,8 @@
     <Content Include="install\steps\welcome.ascx" />
     <Content Include="install\Title.ascx" />
     <Content Include="install\utills\p.aspx" />
+    <Content Include="scripts\Formulari.js" />
+    <Content Include="scripts\lib\jquery\jquery-1.8.2.min.js" />
     <Content Include="umbraco\actions\delete.aspx" />
     <Content Include="umbraco\actions\editContent.aspx" />
     <Content Include="umbraco\actions\preview.aspx" />
@@ -1704,7 +1709,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\PuntuacioJornada.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="usercontrols\FormulariJornada.ascx.cs">
       <DependentUpon>FormulariJornada.ascx</DependentUpon>
@@ -1758,7 +1762,12 @@
     <Content Include="masterpages\PorraHome.master" />
     <Content Include="masterpages\Website.master" />
     <Content Include="macroScripts\PorraMenuNavegacio.cshtml" />
+    <Content Include="macroScripts\MacroPorra.cshtml" />
+    <None Include="json\Barcelona.json" />
+    <None Include="json\Equips.json" />
+    <None Include="json\Madrid.json" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="packages.config" />
     <None Include="umbraco\dashboard\air\DesktopMediaUploader.air" />
     <Content Include="umbraco\masterpages\default.Master" />
     <Content Include="umbraco\masterpages\umbracoDialog.Master" />
@@ -1787,8 +1796,13 @@
     <Folder Include="css\" />
     <Folder Include="media\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="scripts\" />
     <Folder Include="xslt\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{6E6AEC75-CDB2-4340-BA83-AE8225BDBC8E}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

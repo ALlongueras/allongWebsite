@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "albertllonguerasWebsite", "albertllonguerasWebsite\albertllonguerasWebsite.csproj", "{8B4200C3-202C-4DBE-B5F6-4311941F3D30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{6E6AEC75-CDB2-4340-BA83-AE8225BDBC8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{8B4200C3-202C-4DBE-B5F6-4311941F3D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B4200C3-202C-4DBE-B5F6-4311941F3D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B4200C3-202C-4DBE-B5F6-4311941F3D30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E6AEC75-CDB2-4340-BA83-AE8225BDBC8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E6AEC75-CDB2-4340-BA83-AE8225BDBC8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E6AEC75-CDB2-4340-BA83-AE8225BDBC8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E6AEC75-CDB2-4340-BA83-AE8225BDBC8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

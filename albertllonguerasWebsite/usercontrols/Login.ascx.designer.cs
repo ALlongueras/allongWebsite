@@ -7,7 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace albertllonguerasWebsite.usercontrols {
+namespace albertllonguerasWebsite.usercontrols
+{
     
     
     public partial class Login {

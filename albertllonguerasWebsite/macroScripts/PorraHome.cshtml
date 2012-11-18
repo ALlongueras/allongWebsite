@@ -1,5 +1,5 @@
 @using umbraco.MacroEngines
-@using albertllonguerasWebsite.Models;
+@using Logica.Models
 @{
     //informació previa
     CurrentModel.GetPropertyValue("jornada");
@@ -9,11 +9,11 @@
         @Html.Raw(node.GetPropertyValue("text"))
     }
 
-    //informació jugador
+    //Puntuació de la jornada de cada jugador
     List<PuntuacioJornada> puntuacionsJornada = new List<PuntuacioJornada>();
     
     <h2>
-        Aquests son els jugadors:</h2>
+        Puntuació de la @CurrentModel.GetPropertyValue("jornada") de cada jugador:</h2>
     <ul>
         @foreach (DynamicNode jugador in CurrentModel.Descendants("Jugador"))
         {
