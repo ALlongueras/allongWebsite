@@ -62,84 +62,84 @@ namespace albertllonguerasWebsite.usercontrols
             document.getProperty("jornada").Value = jornada;
             document.getProperty("equipLocal").Value = EquipLocal.SelectedValue;
             document.getProperty("equipVisitant").Value = EquipVisitant.SelectedValue;
-            document.getProperty("resultatLocal").Value = ResultatLocal.SelectedValue;
-            document.getProperty("resultatVisitant").Value = ResultatVisitant.SelectedValue;
+            //document.getProperty("resultatLocal").Value = ResultatLocal.SelectedValue;
+            //document.getProperty("resultatVisitant").Value = ResultatVisitant.SelectedValue;
 
-            string golejadorsLocal = string.Empty;
-            for (int i = 0; i < GolejadorsLocal.Items.Count; i++)
-            {
-                if (GolejadorsLocal.Items[i].Selected == true)
-                {
-                    golejadorsLocal = string.Format("{0}{1},", golejadorsLocal, GolejadorsLocal.Items[i].Value);
-                }
+            //string golejadorsLocal = string.Empty;
+            //for (int i = 0; i < GolejadorsLocal.Items.Count; i++)
+            //{
+            //    if (GolejadorsLocal.Items[i].Selected == true)
+            //    {
+            //        golejadorsLocal = string.Format("{0}{1},", golejadorsLocal, GolejadorsLocal.Items[i].Value);
+            //    }
 
-            }
-            document.getProperty("golejadorsLocal").Value = golejadorsLocal;
+            //}
+            //document.getProperty("golejadorsLocal").Value = golejadorsLocal;
 
-            string golejadorsVisitant = string.Empty;
-            for (int i = 0; i < GolejadorsVisitant.Items.Count; i++)
-            {
-                if (GolejadorsVisitant.Items[i].Selected == true)
-                {
-                    golejadorsVisitant = string.Format("{0}{1},", golejadorsVisitant, GolejadorsVisitant.Items[i].Value);
-                }
+            //string golejadorsVisitant = string.Empty;
+            //for (int i = 0; i < GolejadorsVisitant.Items.Count; i++)
+            //{
+            //    if (GolejadorsVisitant.Items[i].Selected == true)
+            //    {
+            //        golejadorsVisitant = string.Format("{0}{1},", golejadorsVisitant, GolejadorsVisitant.Items[i].Value);
+            //    }
 
-            }
-            document.getProperty("golejadorsVisitant").Value = golejadorsVisitant;
+            //}
+            //document.getProperty("golejadorsVisitant").Value = golejadorsVisitant;
 
             document.Publish(user);
             umbraco.library.UpdateDocumentCache(document.Id);
         }
 
-        protected void EquipLocal_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ResultatLocal.SelectedValue = "0";
-            GolejadorsLocal.Visible = false;
-            ResultatLocal.Visible = true;
-        }
+        //protected void EquipLocal_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+            //ResultatLocal.SelectedValue = "0";
+            //GolejadorsLocal.Visible = false;
+            //ResultatLocal.Visible = true;
+        //}
 
-        protected void ResultatLocal_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ListItemCollection itemsLocal = GolejadorsLocal.Items;
-            if (itemsLocal.Count > 0)
-            {
-                itemsLocal.Clear();
-            }
-            List<Jugadors> llistatJugadors = GetData.GetPlayersFromJson(EquipLocal.SelectedValue);
-            if (llistatJugadors != null)
-            {
-                foreach (var jugador in llistatJugadors)
-                {
-                    itemsLocal.Add(new ListItem(jugador.Nom, jugador.Nom));
-                }
-            }
-            GolejadorsLocal.Visible = true;
-        }
+        //protected void ResultatLocal_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+            //ListItemCollection itemsLocal = GolejadorsLocal.Items;
+            //if (itemsLocal.Count > 0)
+            //{
+            //    itemsLocal.Clear();
+            //}
+            //List<Jugadors> llistatJugadors = GetData.GetPlayersFromJson(EquipLocal.SelectedValue);
+            //if (llistatJugadors != null)
+            //{
+            //    foreach (var jugador in llistatJugadors)
+            //    {
+            //        itemsLocal.Add(new ListItem(jugador.Nom, jugador.Nom));
+            //    }
+            //}
+            //GolejadorsLocal.Visible = true;
+        //}
 
-        protected void EquipVisitant_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ResultatVisitant.SelectedValue = "0";
-            GolejadorsVisitant.Visible = false;
-            ResultatVisitant.Visible = true;
-        }
+        //protected void EquipVisitant_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    ResultatVisitant.SelectedValue = "0";
+        //    GolejadorsVisitant.Visible = false;
+        //    ResultatVisitant.Visible = true;
+        //}
 
-        protected void ResultatVisitant_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ListItemCollection itemsLocal = GolejadorsVisitant.Items;
-            if (itemsLocal.Count > 0)
-            {
-                itemsLocal.Clear();
-            }
-            List<Jugadors> llistatJugadors = GetData.GetPlayersFromJson(EquipVisitant.SelectedValue);
-            if (llistatJugadors != null)
-            {
-                foreach (var jugador in llistatJugadors)
-                {
-                    itemsLocal.Add(new ListItem(jugador.Nom, jugador.Nom));
-                }
-            }
-            GolejadorsVisitant.Visible = true;
-        }
+        //protected void ResultatVisitant_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+            //ListItemCollection itemsLocal = GolejadorsVisitant.Items;
+            //if (itemsLocal.Count > 0)
+            //{
+            //    itemsLocal.Clear();
+            //}
+            //List<Jugadors> llistatJugadors = GetData.GetPlayersFromJson(EquipVisitant.SelectedValue);
+            //if (llistatJugadors != null)
+            //{
+            //    foreach (var jugador in llistatJugadors)
+            //    {
+            //        itemsLocal.Add(new ListItem(jugador.Nom, jugador.Nom));
+            //    }
+            //}
+            //GolejadorsVisitant.Visible = true;
+        //}
 
     }
 }

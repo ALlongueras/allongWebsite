@@ -8,3 +8,6 @@ albertllonguerasWebsite/install/
 albertllonguerasWebsite/media/
 albertllonguerasWebsite/obj/
 
+Logica/bin/
+albertllonguerasWebsite/bin/
+albertllonguerasWebsite/bin/*.pdb

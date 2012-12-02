@@ -1,14 +1,14 @@
 [
 	{
-		"dorsal":"1",
-		"nom":"Casillas"
+		"id":"1",
+		"name":"Casillas"
 	},
 	{
-		"dorsal":"2",
-		"nom":"Ramos"
+		"id":"2",
+		"name":"Ramos"
 	},
 	{
-		"dorsal":"3",
-		"nom":"Pepe"
+		"id":"3",
+		"name":"Pepe"
 	}
 ]

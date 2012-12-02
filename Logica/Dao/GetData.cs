@@ -16,11 +16,16 @@ namespace Logica.Dao
 
     using Newtonsoft.Json;
 
+    using umbraco.presentation.umbracobase;
+
     /// <summary>
     /// TODO: Update summary.
     /// </summary>
+
+    [RestExtension("getData")]
     public class GetData
     {
+        [RestExtensionMethod(returnXml = false)]
         public static List<Jugadors> GetPlayersFromJson(string path)
         {
             string json = Utils.ReadJson(path);

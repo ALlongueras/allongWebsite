@@ -22,24 +22,6 @@ namespace albertllonguerasWebsite.usercontrols {
         protected global::System.Web.UI.WebControls.DropDownList EquipLocal;
         
         /// <summary>
-        /// ResultatLocal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ResultatLocal;
-        
-        /// <summary>
-        /// GolejadorsLocal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList GolejadorsLocal;
-        
-        /// <summary>
         /// EquipVisitant control.
         /// </summary>
         /// <remarks>
@@ -47,24 +29,6 @@ namespace albertllonguerasWebsite.usercontrols {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList EquipVisitant;
-        
-        /// <summary>
-        /// ResultatVisitant control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ResultatVisitant;
-        
-        /// <summary>
-        /// GolejadorsVisitant control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList GolejadorsVisitant;
         
         /// <summary>
         /// Button1 control.

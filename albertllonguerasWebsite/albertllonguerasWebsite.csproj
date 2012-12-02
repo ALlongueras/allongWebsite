@@ -199,6 +199,9 @@
     <Content Include="bin\x86\sqlcese40.dll" />
     <Content Include="config\splashes\booting.aspx" />
     <Content Include="config\splashes\noNodes.aspx" />
+    <Content Include="css\token-input\token-input-facebook.css" />
+    <Content Include="css\token-input\token-input-mac.css" />
+    <Content Include="css\token-input\token-input.css" />
     <Content Include="default.aspx" />
     <Content Include="install\default.aspx" />
     <Content Include="install\steps\database.ascx" />
@@ -215,6 +218,7 @@
     <Content Include="install\utills\p.aspx" />
     <Content Include="scripts\Formulari.js" />
     <Content Include="scripts\lib\jquery\jquery-1.8.2.min.js" />
+    <Content Include="scripts\lib\jquery\jquery.tokeninput.js" />
     <Content Include="umbraco\actions\delete.aspx" />
     <Content Include="umbraco\actions\editContent.aspx" />
     <Content Include="umbraco\actions\preview.aspx" />
@@ -1793,7 +1797,6 @@
     <Folder Include="App_Code\" />
     <Folder Include="App_Data\ClientDependency\" />
     <Folder Include="App_Data\ExamineIndexes\" />
-    <Folder Include="css\" />
     <Folder Include="media\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="xslt\" />
